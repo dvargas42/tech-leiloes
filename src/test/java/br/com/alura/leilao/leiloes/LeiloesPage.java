@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import br.com.alura.leilao.PageObject;
+import br.com.alura.leilao.lance.LancePage;
 
 public class LeiloesPage extends PageObject{
 
@@ -33,5 +34,10 @@ public class LeiloesPage extends PageObject{
 
     public boolean isPaginaAtual() {
         return browser.getCurrentUrl().equals(URL_LEILOES);
+    }
+
+    public LancePage carregarPaginaLance() {
+        browser.findElement(By.cssSelector("#tabela-leiloes tbody tr:nth-child(2) td:last-child a")).click();
+        return new LancePage(browser);
     }
 }
