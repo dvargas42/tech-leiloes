@@ -29,9 +29,9 @@ public class CadastroLeilaoPage extends PageObject{
     public boolean isMensagensValidacaoVisiveis() {
         String pageSource = this.browser.getPageSource();
         return pageSource.contains("não deve estar em branco") &&
-        pageSource.contains("minimo 3 caracteres") &&
-        pageSource.contains("deve ser um valor maior de 0.1") &&
-        pageSource.contains("deve ser uma data no formato dd/MM/yyyy");
+                pageSource.contains("minimo 3 caracteres") &&
+                pageSource.contains("deve ser um valor maior de 0.1") &&
+                pageSource.contains("deve ser uma data no formato dd/MM/yyyy");
     }
 }
  
