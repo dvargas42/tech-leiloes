@@ -31,7 +31,7 @@
 							<span class="input-group-text" id="">Novo Lance:</span>
 						</div>
 
-						<input type="text" th:field="*{valor}" class="form-control" placeholder="valor" th:classappend="${#fields.hasErrors('valor')} ? is-invalid : valid" autofocus="autofocus">
+						<input id="valorLance" type="text" th:field="*{valor}" class="form-control" placeholder="valor" th:classappend="${#fields.hasErrors('valor')} ? is-invalid : valid" autofocus="autofocus">
 						<button class="btn btn-outline-primary" type="submit" id="btnDarLance">Dar lance!</button>
 						<div class="invalid-feedback" th:errors="*{valor}">Por favor insira um valor válido.</div>
 					</div>
